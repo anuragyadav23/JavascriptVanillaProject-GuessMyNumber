@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "VT323", monospace;
+}
+body {
+  background-color: #a3b18a;
+}
+
+header {
+  display: flex;
+  padding: 10px;
+  flex-direction: row;
+  font-size: 2.5vw;
+  justify-content: space-between;
+  align-items: center;
+}
+header .btn {
+  font-size: 2.5vw;
+  padding: 0.5vw;
+  background-color: white;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: white;
+    color: black;
+    transition: 0s;
+  }
+}
+
+main {
+  font-size: 5vw;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4vh;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 1fr;
+  align-items: center;
+}
+
+.main-container p {
+  border: 2px solid black;
+  text-align: center;
+  font-size: 5vw;
+  color: white;
+  background-color: black;
+}
+.line {
+  width: auto;
+  height: 0vh;
+  border: 2.5px solid black;
+}
+
+//----- Input Section------------
+section {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 50vh;
+  font-size: 3vw;
+}
+// Section Left container
+.section-left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-left-container input {
+  text-align: center;
+  width: 8vw;
+  height: 10vh;
+  font-size: 3vw;
+  margin-bottom: 2.5vh;
+  border: 2px solid black;
+  &:hover {
+    cursor: pointer;
+  }
+  &:active {
+    outline-style: none;
+  }
+}
+.section-left-container button {
+  margin-top: 2.5vh;
+  font-size: 3vw;
+  text-align: center;
+  padding: 1vh;
+  font-weight: bold;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    transition: 0.25s;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: white;
+    color: black;
+    transition: 0s;
+  }
+}
+
+// Section Right container
+.section-right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section-right-container p {
+  margin: 5vh 0vh;
+}
+
+// here we will write the media queries
+@media screen and (max-width: 650px) {
+  header {
+    flex-direction: column;
+    font-size: 6vw;
+  }
+  header .btn {
+    font-size: 6vw;
+    margin-bottom: 10px;
+  }
+
+  main {
+    font-size: 10vw;
+  }
+  .main-container p {
+    font-size: 10vw;
+  }
+  section {
+    font-size: 6vw;
+  }
+  .section-left-container input {
+    font-size: 6vw;
+    width: 10vw;
+    height: 7vh;
+    margin-bottom: 2.5vh;
+  }
+  .section-left-container button {
+    font-size: 6vw;
+    margin-top: 0vh;
+    font-size: 6vw;
+  }
+
+  .section-right-container {
+    justify-content: center;
+  }
+  .section-right-container p {
+    margin: 2.5vh;
+  }
+}
